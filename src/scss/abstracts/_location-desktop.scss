@@ -1,0 +1,83 @@
+@use 'config'as *;
+
+#location-link {
+  position: absolute;
+  left: 5%;
+  width: 12rem;
+}
+
+.location {
+  button {
+    &:nth-child(1) {
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      z-index: 1;
+      text-align: left;
+    }
+  }
+
+  a {
+    transition: all .5s ease-out;
+
+    &:hover>button:nth-child(1) {
+      background-color: $gold;
+    }
+
+    &:hover>button:nth-child(2) {
+      background-color: $almost-black;
+    }
+  }
+}
+
+.map {
+  @include background('../images/desktop/image-map.png');
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  padding: 3rem 5%;
+  background-color: $almost-black;
+  color: $white;
+
+  &-section {
+    h3 {
+      color: $gold;
+    }
+  }
+}
+
+address {
+  margin: 3rem 0;
+}
+
+.location-footer {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 2rem;
+  background-color: $gold;
+  padding: 3rem 5%;
+
+  &-section {
+    &:nth-child(3) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      svg {
+        transition: all .25s ease-out;
+
+        &:hover {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

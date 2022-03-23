@@ -1,0 +1,22 @@
+@use 'config'as *;
+
+@media screen and (max-width: 500px) {
+  #location-link {
+    left: 0;
+  }
+
+  .location-info {
+    grid-template-columns: 1fr;
+  }
+
+  .location-footer {
+    grid-template-columns: 1fr;
+
+    &-section {
+      &:nth-child(3) {
+        justify-content: start;
+        gap: 2rem;
+      }
+    }
+  }
+}

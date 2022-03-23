@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3, h2, h1 {
+  font-family: "Big Shoulders Display Black";
+}
+
+p {
+  font-family: "Outfit Light";
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 88px;
+}
+
+h2 {
+  font-size: 70px;
+  line-height: 70px;
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 50px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+button {
+  height: 3rem;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0 0.75rem;
+  transition: all 0.25s ease-out;
+}
+button:nth-child(1) {
+  background-color: #151515;
+}
+button:nth-child(2) {
+  background-color: #D5966C;
+}
+
+a {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 10rem;
+}
+a button:nth-child(1) {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+a button:nth-child(2) {
+  grid-column: 2/6;
+  grid-row: 1;
+}
+
+button:nth-child(1) {
+  z-index: 1;
+}
+button:nth-child(2) {
+  text-align: right;
+}
+
+.home h1 {
+  background: linear-gradient(to right, #FFFFFF 50%, #151515 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home a {
+  transition: all 0.5s ease-out;
+}
+.home a:hover > button:nth-child(1) {
+  background-color: #D5966C;
+}
+.home a:hover > button:nth-child(2) {
+  background-color: #151515;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
+}
+.banner-grid:nth-child(1) {
+  background-color: #151515;
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.banner-grid:nth-child(2) {
+  background: url("../images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 5/9;
+  grid-row: 1;
+}
+.banner-grid:nth-child(3) {
+  grid-column: 9/13;
+  grid-row: 1;
+}
+.banner-grid:nth-child(4) {
+  grid-column: 2/8;
+  grid-row: 1;
+  margin: auto;
+}
+.banner-grid:nth-child(5) {
+  grid-column: 8/11;
+  grid-row: 1;
+  margin: auto;
+  margin-left: 2rem;
+}
+.banner a {
+  margin-top: 3rem;
+}
+
+.gallery {
+  margin: 5rem 5%;
+}
+.gallery p {
+  margin: 3rem 0;
+}
+.gallery-top {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.gallery-top-section:nth-child(1) {
+  margin: 2rem 0;
+}
+.gallery-top-section:nth-child(2) {
+  background: url("../images/desktop/image-grid-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gallery-bottom {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "grid1 grid2" "grid1 grid3";
+  gap: 1rem;
+}
+.gallery-bottom-section:nth-child(1) {
+  grid-area: grid1;
+}
+.gallery-bottom-section:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.gallery-bottom-section:nth-child(2) {
+  grid-area: grid2;
+}
+.gallery-bottom-section:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+.gallery-bottom-section:nth-child(3) {
+  grid-area: grid3;
+  background-color: #151515;
+  color: #FFFFFF;
+  padding: 2rem;
+}
+
+.home-footer {
+  background-color: #151515;
+  color: #FFFFFF;
+  padding: 3rem 5%;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 2rem;
+}
+.home-footer svg {
+  fill: #FFFFFF;
+  transition: all 0.25s ease-out;
+}
+.home-footer svg:hover {
+  fill: #D5966C;
+}
+
+.footer-section:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 50px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  a {
+    width: 15rem;
+  }
+
+  button {
+    height: 5rem;
+  }
+
+  .banner-grid:nth-child(1) {
+    display: none;
+  }
+  .banner-grid:nth-child(2) {
+    grid-column: 1/7;
+    grid-row: 1/5;
+  }
+  .banner-grid:nth-child(4) {
+    grid-column: 6/11;
+    grid-row: 2;
+  }
+  .banner-grid:nth-child(5) {
+    grid-column: 6/11;
+    grid-row: 3;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 60px;
+    line-height: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .banner {
+    height: max-content;
+  }
+  .banner-grid:nth-child(2) {
+    grid-column: 1/13;
+    grid-row: 1;
+    height: 50vh;
+  }
+  .banner-grid:nth-child(3) {
+    grid-column: 1/13;
+    grid-row: 2;
+    padding: 0 5%;
+  }
+  .banner-grid:nth-child(4) {
+    grid-column: 1/13;
+    grid-row: 3;
+    padding: 0 5%;
+  }
+  .banner-grid:nth-child(5) {
+    grid-column: 1/13;
+    grid-row: 4;
+    padding: 0 5%;
+  }
+
+  .gallery-top {
+    grid-template-columns: 1fr;
+  }
+  .gallery-bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas: "grid1" "grid2" "grid3";
+  }
+  .gallery-bottom-section:nth-child(2) img {
+    height: max-content;
+  }
+
+  .home-footer {
+    grid-template-columns: 1fr;
+  }
+}
+#location-link {
+  position: absolute;
+  left: 5%;
+  width: 12rem;
+}
+
+.location button:nth-child(1) {
+  text-align: left;
+}
+.location button:nth-child(2) {
+  z-index: 1;
+  text-align: left;
+}
+.location a {
+  transition: all 0.5s ease-out;
+}
+.location a:hover > button:nth-child(1) {
+  background-color: #D5966C;
+}
+.location a:hover > button:nth-child(2) {
+  background-color: #151515;
+}
+
+.map {
+  background: url("../images/desktop/image-map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  padding: 3rem 5%;
+  background-color: #151515;
+  color: #FFFFFF;
+}
+.location-info-section h3 {
+  color: #D5966C;
+}
+
+address {
+  margin: 3rem 0;
+}
+
+.location-footer {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 2rem;
+  background-color: #D5966C;
+  padding: 3rem 5%;
+}
+.location-footer-section:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.location-footer-section:nth-child(3) svg {
+  transition: all 0.25s ease-out;
+}
+.location-footer-section:nth-child(3) svg:hover {
+  fill: #FFFFFF;
+}
+
+@media screen and (max-width: 820px) {
+  .map {
+    background: url("../images/tablet/image-map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #location-link {
+    left: 0;
+  }
+
+  .location-info {
+    grid-template-columns: 1fr;
+  }
+
+  .location-footer {
+    grid-template-columns: 1fr;
+  }
+  .location-footer-section:nth-child(3) {
+    justify-content: start;
+    gap: 2rem;
+  }
+}

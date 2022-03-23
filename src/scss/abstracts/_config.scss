@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$gold: #D5966C;
+$white: #FFFFFF;
+$dark-gray: #444444;
+$almost-black: #151515;
+
+%heading-font {
+  font-family: 'Big Shoulders Display Black';
+}
+
+%body-font {
+  font-family: 'Outfit Light';
+}
+
+%heading-xl {
+  font-size: 96px;
+  line-height: 88px;
+  @extend %heading-font;
+}
+
+%heading-l {
+  font-size: 70px;
+  line-height: 70px;
+  @extend %heading-font;
+}
+
+%heading-m {
+  font-size: 60px;
+  line-height: 50px;
+  @extend %heading-font;
+}
+
+%heading-s {
+  font-size: 36px;
+  line-height: 36px;
+  @extend %heading-font;
+}
+
+%body-m {
+  font-size: 22px;
+  line-height: 32px;
+  @extend %body-font;
+}
+
+%body-s {
+  font-size: 18px;
+  line-height: 28px;
+  @extend %body-font;
+}
+
+@mixin background($url) {
+  background: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  height: 3rem;
+  border: none;
+  color: $white;
+  font-weight: 700;
+  padding: 0 .75rem;
+  transition: all .25s ease-out;
+
+
+  &:nth-child(1) {
+    background-color: $almost-black;
+  }
+
+  &:nth-child(2) {
+    background-color: $gold;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 10rem;
+
+  button {
+    &:nth-child(1) {
+      grid-column: 1 / 5;
+      grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: 2 / 6;
+      grid-row: 1;
+    }
+  }
+}
