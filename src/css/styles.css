@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,11 @@
 }
 
 h3, h2, h1 {
-  font-family: "Big Shoulders Display Black";
+  font-family: "Big Shoulders Display", cursive;
 }
 
-p {
-  font-family: "Outfit Light";
+body, p {
+  font-family: "Outfit", sans-serif;
 }
 
 h1 {
@@ -30,6 +31,10 @@ h3 {
 p {
   font-size: 22px;
   line-height: 32px;
+}
+
+body {
+  color: #151515;
 }
 
 button {
@@ -193,6 +198,7 @@ button:nth-child(2) {
   h1 {
     font-size: 70px;
     line-height: 70px;
+    color: #151515;
   }
 
   h2 {
