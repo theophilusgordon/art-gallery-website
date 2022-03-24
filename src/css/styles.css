@@ -198,7 +198,7 @@ button:nth-child(2) {
   h1 {
     font-size: 70px;
     line-height: 70px;
-    color: #151515;
+    -webkit-text-fill-color: initial !important;
   }
 
   h2 {
